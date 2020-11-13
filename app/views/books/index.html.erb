@@ -5,7 +5,7 @@
   <%= f.label :auther, "作者を入力" %>
   <%= f.search_field :auther_cont %>
 
-  <%= f.label :price %>
+  <%= f.label :price, "価格の入力" %>
   <%= f.number_field :price_gteq %>円〜
   <%= f.number_field :price_lt %>円
 
@@ -19,10 +19,10 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Auther</th>
-      <th>Price</th>
-      <th colspan="3"></th>
+      <th><%= sort_link(@q, :title, "タイトル") %></th>
+      <th><%= sort_link(@q, :auther, "作者") %></th>
+      <th><%= sort_link(@q, :price, "価格") %></th>
+      <th colspan="3"></th
     </tr>
   </thead>
 
