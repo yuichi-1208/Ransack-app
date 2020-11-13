@@ -1,3 +1,10 @@
+<%= search_form_for @q do |f| %>
+  <%= f.label :title_or_auther, "キーワード検索" %>
+  <%= f.search_field :title_or_auther_cont %>
+
+  <%= f.submit "検索" %>
+<% end %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Books</h1>
