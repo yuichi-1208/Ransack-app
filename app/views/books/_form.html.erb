@@ -12,6 +12,15 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :title_image %>
+    <%= form.file_field :title_image %>
+
+    <% if book.title_image.attached? %>
+      <%= image_tag book.title_image %>
+    <% end %>
+  </div>
+
+  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
